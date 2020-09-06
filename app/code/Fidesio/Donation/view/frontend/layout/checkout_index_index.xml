@@ -1,0 +1,118 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="summary" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="totals" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="donation" xsi:type="array">
+                                                            <item name="component" xsi:type="string">
+                                                                Fidesio_Donation/js/view/checkout/cart/totals/donation
+                                                            </item>
+                                                            <item name="sortOrder" xsi:type="string">20</item>
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="template" xsi:type="string">
+                                                                    Fidesio_Donation/checkout/cart/totals/donation
+                                                                </item>
+                                                                <item name="title" xsi:type="string" translate="true">
+                                                                    Donation
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                                <item name="cart_items" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="details" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="subtotal" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">
+                                                                        Magento_Tax/js/view/checkout/summary/item/details/subtotal
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <!-- <item name="steps" xsi:type="array">
+                                     <item name="children" xsi:type="array">
+                                         <item name="billing-step" xsi:type="array">
+                                             <item name="children" xsi:type="array">
+                                                 <item name="payment" xsi:type="array">
+                                                     <item name="children" xsi:type="array">
+                                                         <item name="beforeMethods" xsi:type="array">
+                                                             <item name="children" xsi:type="array">
+                                                                 &lt;!&ndash; new form &ndash;&gt;
+                                                                 <item name="donation-checkout-form-container" xsi:type="array">
+                                                                     <item name="component" xsi:type="string">Fidesio_Donation/js/view/donation-checkout-form</item>
+                                                                     <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                     <item name="config" xsi:type="array">
+                                                                         <item name="template" xsi:type="string">Fidesio_Donation/donation-checkout-form</item>
+                                                                     </item>
+                                                                     <item name="children" xsi:type="array">
+                                                                         <item name="donation-checkout-form-fieldset" xsi:type="array">
+                                                                             <item name="component" xsi:type="string">uiComponent</item>
+                                                                             <item name="displayArea" xsi:type="string">donation-checkout-form-fields</item>
+                                                                             <item name="children" xsi:type="array">
+                                                                                  <item name="donation_select" xsi:type="array">
+                                                                                     <item name="component" xsi:type="string">Magento_Ui/js/form/element/select</item>
+                                                                                     <item name="config" xsi:type="array">
+                                                                                         <item name="customScope" xsi:type="string">donationCheckoutFormScope</item>
+                                                                                         <item name="template" xsi:type="string">ui/form/field</item>
+                                                                                         <item name="elementTmpl" xsi:type="string">ui/form/element/select</item>
+                                                                                     </item>
+                                                                                     <item name="options" xsi:type="array">
+                                                                                         <item name="0" xsi:type="array">
+                                                                                             <item name="label" xsi:type="string">Please Choice your donation</item>
+                                                                                             <item name="value" xsi:type="string">0</item>
+                                                                                         </item>
+                                                                                         <item name="1" xsi:type="array">
+                                                                                             <item name="label" xsi:type="string">8 €</item>
+                                                                                             <item name="value" xsi:type="string">8</item>
+                                                                                         </item>
+                                                                                         <item name="2" xsi:type="array">
+                                                                                             <item name="label" xsi:type="string">12 €</item>
+                                                                                             <item name="value" xsi:type="string">12</item>
+                                                                                         </item>
+                                                                                         <item name="3" xsi:type="array">
+                                                                                             <item name="label" xsi:type="string">15 €</item>
+                                                                                             <item name="value" xsi:type="string">15</item>
+                                                                                         </item>
+                                                                                         <item name="4" xsi:type="array">
+                                                                                             <item name="label" xsi:type="string">20 €</item>
+                                                                                             <item name="value" xsi:type="string">20</item>
+                                                                                         </item>
+                                                                                     </item>
+                                                                                  </item>
+                                                                             </item>
+                                                                         </item>
+                                                                     </item>
+                                                                 </item>
+                                                             </item>
+                                                         </item>
+                                                     </item>
+                                                 </item>
+                                             </item>
+                                         </item>
+                                     </item>
+                                 </item>-->
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

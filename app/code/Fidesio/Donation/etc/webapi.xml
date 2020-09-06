@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/donation/save/" method="POST">
+        <service class="Fidesio\Donation\Api\Donation\AjaxDonationSaveInterface" method="donationSave"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/donation/image/" method="POST">
+        <service class="Fidesio\Donation\Api\Donation\AjaxDonationSaveInterface" method="getImage"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/donation/text/" method="POST">
+        <service class="Fidesio\Donation\Api\Donation\AjaxDonationSaveInterface" method="getText"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

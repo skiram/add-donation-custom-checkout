@@ -1,0 +1,36 @@
+<style>
+    .inline-block {
+        display: inline-block;
+    }
+
+    .select-fieldset {
+        width: 25%;
+    }
+
+    .donation-text {
+        width: 40%;
+    }
+</style>
+<div>
+    <form class="form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}"
+          id="donation-checkout-form-container">
+        <label data-bind="i18n: 'Choose your donation: '"></label>
+        <div class="don_container">
+            <input data-bind="attr: { id: 'enable_disable_don'},click: enabled()" name="don_disable_enable"
+                   type="checkbox"/>
+            <img , class="inline-block" data-bind="attr: {'src': getImage()}" height="150" width="150"/>
+            <fieldset class="fieldset inline-block select-fieldset">
+                <!-- ko foreach: getRegion('donation-checkout-form-fields') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <!--/ko-->
+                <select
+                    class="select"
+                    data-bind="attr: { id: 'select_don_value', disabled: 'disabled'}, foreach: getDonationValues(),event:{ change: onSubmit}" name="donation_select">
+                    <option data-bind="value:value,text:label"></option>
+                </select>
+            </fieldset>
+            <div class="donation-text inline-block" data-bind="html: getText()"></div>
+        </div>
+    </form>
+</div>
+</hr>

@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Sales:etc/pdf_file.xsd">
+    <totals>
+        <total name="donation">
+            <title translate="true">Donation</title>
+            <source_field>donation</source_field>
+            <model>Fidesio\Donation\Model\Sales\Pdf\Donation</model>
+            <font_size>7</font_size>
+            <display_zero>false</display_zero>
+            <sort_order>600</sort_order>
+        </total>
+    </totals>
+</config>

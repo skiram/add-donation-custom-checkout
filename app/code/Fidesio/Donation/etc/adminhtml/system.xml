@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="donation" translate="label" sortOrder="10">
+            <label>Donation</label>
+        </tab>
+        <section id="donation_general" translate="label" sortOrder="55" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <class>separator-top</class>
+            <label>Donation Config</label>
+            <tab>donation</tab>
+            <resource>Fidesio_Donation::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="0">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="2" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Donation Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="donation_values" translate="label comment" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Donation Values</label>
+                    <comment><![CDATA[set Donation Values separate width (,)]]></comment>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="custom_file_upload" translate="label"
+                       type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="6" showInDefault="1"
+                       showInWebsite="1">
+                    <label>Upload Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\File</backend_model>
+                    <upload_dir config="system" scope_info="1">don_image</upload_dir>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="editor_textarea" translate="label comment" sortOrder="7" type="editor" showInStore="1"
+                       showInDefault="1">
+                    <label>Description</label>
+                    <frontend_model>Fidesio\Donation\Block\Adminhtml\System\Config\Editor</frontend_model>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_save_after">
+        <observer name="set_item_donation_attribute" instance="Fidesio\Donation\Observer\SetDonationAttributeToOrder"/>
+    </event>
+    <event name="sales_order_save_before">
+        <observer name="set_item_donation_attribute_before"
+                  instance="Fidesio\Donation\Observer\SetDonationAttributeToOrder"/>
+    </event>
+    <event name="sales_order_invoice_pay">
+        <observer name="set_item_donation_attribute_invoice"
+                  instance="Fidesio\Donation\Observer\SetDonationAttributeToInvoice"/>
+    </event>
+</config>
